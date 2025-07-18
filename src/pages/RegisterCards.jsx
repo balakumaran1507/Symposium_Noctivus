@@ -11,6 +11,12 @@ const RegisterCards = () => {
 
   const events = [
     {
+      name:"Bug Bounty",
+      description:"Hunt down vulnerabilities, patch up chaos — unleash your inner hacker.",
+      link:"https://forms.gle/w6ZjGgxvsBNmQftDA"
+
+    },
+    {
       name: "Capture the Flag",
       description:
         "Test your cybersecurity skills with logic-based challenges.",
@@ -26,12 +32,7 @@ const RegisterCards = () => {
       description: "From coding to E-sports — there’s something for all.",
       link: "https://forms.gle/RhyVE1Sb9XncoYt96",
     },
-    {
-      name:"Bug Bounty",
-      description:"Hunt down vulnerabilities, patch up chaos — unleash your inner hacker.",
-      link:""
-
-    }
+    
   ];
 
   return (
@@ -68,12 +69,12 @@ const RegisterCards = () => {
         </h2>
         
 
-        <div className="grid gap-10 w-full max-w-4xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 w-full max-w-4xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
           {events.map((event, index) => (
             <SpotlightCard
               key={index}
               spotlightColor="rgba(0, 150, 255, 0.3)"
-              className="custom-spotlight-card p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300"
+              className="custom-spotlight-card p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 min-w-s"
             >
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-4">
