@@ -68,7 +68,7 @@ const Workshop = ({ refProp }) => {
                 <div className="bg-white/20 flex items-center justify-center w-10 lg:w-12 aspect-square rounded-full shrink-0">
                   <VscTools className="text-white text-lg lg:text-xl" />
                 </div>
-                Advanced Web Security
+                Tools Expo
               </h3>
             </div>
             <p className="text-white/60 text-left text-md">
@@ -78,11 +78,13 @@ const Workshop = ({ refProp }) => {
               </span>
             </p>
             <p className="text-white/70 text-left text-md leading-relaxed">
-              This session focuses on securing web apps from modern-day threats
-              such as XSS, CSRF, SSRF, and injection attacks. Participants will
-              engage in practical vulnerability assessments and mitigation
-              strategies.
+              Dive into the world of electronics and embedded systems at our Tools Expo,
+              featuring innovative tools like ESP modules, ATtiny85 microcontrollers, NFC
+              cloners, PN532 readers, and more. This session offers a glimpse into real-world
+              DIY projects and prototyping setups, perfect for tech enthusiasts, students,
+              and makers. Explore automation, IoT, and wireless communication demos in action.
             </p>
+
           </div>
         </div>
       </SpotlightCard>
