@@ -23,9 +23,15 @@ const RegisterCards = () => {
     },
     {
       name: "Tech & Non-Tech Events",
-      description: "From coding to meme-making — there’s something for all.",
+      description: "From coding to E-sports — there’s something for all.",
       link: "https://forms.gle/RhyVE1Sb9XncoYt96",
     },
+    {
+      name:"Bug Bounty",
+      description:"Hunt down vulnerabilities, patch up chaos — unleash your inner hacker.",
+      link:""
+
+    }
   ];
 
   return (
@@ -60,6 +66,7 @@ const RegisterCards = () => {
         <h2 className="text-xl md:text-xl mb-12 text-center text-white/90">
           Register for Your Event
         </h2>
+        
 
         <div className="grid gap-10 w-full max-w-4xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {events.map((event, index) => (
@@ -93,8 +100,7 @@ const RegisterCards = () => {
             </SpotlightCard>
           ))}
         </div>
-
-        {/* Rules Section */}
+                {/* Rules Section */}
         <div className="text-white/80 text-base md:text-lg mt-12 max-w-2xl space-y-4 leading-relaxed">
           <p className="text-white text-lg font-semibold text-left mb-2">
             Note:

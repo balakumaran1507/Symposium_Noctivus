@@ -11,7 +11,7 @@ const events = [
     title: "Null Core",
     icon: <HiOutlineFlag className="text-blue-400 text-4xl" />,
     description: "Capture The Flag",
-    schedule: "10:00 AM - 1:00 PM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "1 to 3 Members",
     overview:
       "A Jeopardy-style Capture The Flag (CTF) competition that challenges your cybersecurity and problem-solving skills",
@@ -29,7 +29,7 @@ const events = [
     title: "GlitchGround",
     icon: <LuBug className="text-blue-400 text-4xl stroke-1" />,
     description: "Bug Bounty",
-    schedule: "10:00 AM - 11:30 AM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "Solo",
     overview:
       "GlitchGround simulates a real-world bug bounty program. Identify security flaws and report them responsibly",
@@ -47,7 +47,7 @@ const events = [
     title: "Beat Overflow",
     icon: <VscCode className="text-blue-400 text-4xl" />,
     description: "Vibe Coding",
-    schedule: "10:00 AM - 11:30 AM",
+    schedule: "10:00 AM – 12:45 PM / 12:45 PM - 3:30 PM",
     teamSize: "2 Members",
     overview:
       "An AI-powered mobile app-building challenge using any tech stack under a surprise topic",
@@ -65,7 +65,7 @@ const events = [
     title: "Beyond Screen",
     icon: <PiPalette className="text-blue-400 text-4xl" />,
     description: "UI/UX",
-    schedule: "11:30 AM - 1:00 PM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "Solo",
     overview:
       "A solo UI/UX event to design intuitive and creative interfaces within the given time frame",
@@ -83,7 +83,7 @@ const events = [
     title: "Paper To Pixel",
     icon: <LuFileCode2 className="text-blue-400 text-4xl stroke-1" />,
     description: "Paper Presentation",
-    schedule: "10:00 AM - 11:30 AM",
+    schedule: "10:00 AM – 12:45 AM",
     teamSize: "1 to 2 Members",
     overview:
       "Present your original research and technical ideas with clarity and confidence in a structured presentation",

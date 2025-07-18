@@ -11,7 +11,7 @@ const events = [
     description: "Guess The Beats",
     date: "Aug 21, 2025",
     venue: "AV Room",
-    schedule: "10:00 AM - 11:30 AM",
+    schedule: "10:00 AM – 12:45 AM",
     teamSize: "2 to 4 Members",
     overview:
       "A thrilling music-based non-tech event with three engaging rounds: reversed BGMs, audio puzzles, and visual clues to challenge your senses.",
@@ -29,7 +29,7 @@ const events = [
     description: "Crack The Code",
     date: "Aug 21, 2025",
     venue: "CSE Lab 2",
-    schedule: "11:30 AM - 1:00 PM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "2 to 4 Members",
     overview:
       "A fast-paced logic-based challenge where teams solve puzzles, crack codes, and use teamwork to break out of the room. Let your brain do the talking.",
@@ -53,7 +53,7 @@ const events = [
     description: "Booyah Awaits",
     date: "Aug 22, 2025",
     venue: "GameZone",
-    schedule: "11:30 AM - 1:00 PM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "4 Members",
     overview:
       "Gear up for an adrenaline-pumping Free Fire tournament that demands tactical skill, fast reflexes, and pure squad synergy.",
@@ -78,7 +78,7 @@ const events = [
     description: "Erangel Echoes",
     date: "Aug 22, 2025",
     venue: "GameZone",
-    schedule: "11:30 AM - 1:00 PM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "4 Members",
     overview:
       "Drop into the battleground for an intense BGMI squad showdown, where only the sharpest team will survive and claim the winner’s tag.",
@@ -93,6 +93,7 @@ const events = [
     ],
   },
 ];
+
 
 const NonTech = ({ refProp }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);

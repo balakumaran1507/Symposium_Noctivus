@@ -41,11 +41,18 @@ const Brochure = () => {
     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
-  const slides = Array.from({ length: totalSlides }).map(() => ({
-    src: "/vec.webp",
-    alt: "Brochure Preview",
-  }));
-
+  const slides = [
+  { src: "/1.jpg", alt: "Brochure Page 1" },
+  { src: "/2.jpg", alt: "Brochure Page 2" },
+  { src: "/3.jpg", alt: "Brochure Page 3" },
+  { src: "/4.jpg", alt: "Brochure Page 4" },
+  { src: "/5.jpg", alt: "Brochure Page 5" },
+  { src: "/6.jpg", alt: "Brochure Page 6" },
+  { src: "/7.jpg", alt: "Brochure Page 7" },
+  { src: "/8.jpg", alt: "Brochure Page 8" },
+  { src: "/9.png", alt: "Brochure Page 9" },
+  { src: "/10.png", alt: "Brochure Page 10" },
+];
   return (
     <div className="flex flex-col items-center px-10 md:px-20 lg:px-32 pt-16 w-full">
       <div className="w-full font-funnel text-blue-50 flex flex-col items-center">
