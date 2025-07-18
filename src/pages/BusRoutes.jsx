@@ -442,7 +442,7 @@ function BusRoute() {
 
         {/* Download PDF */}
         <a
-          href="/bus_routes.pdf"
+          href="/busroutes.pdf"
           download
           className="mb-6 mx-auto justify-center w-full lg:w-fit flex items-center gap-2 px-5 py-2 bg-white/5 hover:bg-white/20 border border-white/20 text-white/70 rounded-lg text-md font-medium transition-all duration-300"
         >

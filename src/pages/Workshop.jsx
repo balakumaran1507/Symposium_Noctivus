@@ -1,5 +1,5 @@
 import SpotlightCard from "../components/SpotlightCard";
-import { VscTools } from "react-icons/vsc";
+import { VscTools,VscCircuitBoard } from "react-icons/vsc";
 
 const Workshop = ({ refProp }) => {
   return (
@@ -66,7 +66,7 @@ const Workshop = ({ refProp }) => {
             <div className="flex items-center gap-3 justify-start md:justify-start">
               <h3 className="text-lg sm:text-xl flex flex-row items-center gap-3 font-medium text-white">
                 <div className="bg-white/20 flex items-center justify-center w-10 lg:w-12 aspect-square rounded-full shrink-0">
-                  <VscTools className="text-white text-lg lg:text-xl" />
+                  <VscCircuitBoard className="text-white text-lg lg:text-xl" />
                 </div>
                 Tools Expo
               </h3>
