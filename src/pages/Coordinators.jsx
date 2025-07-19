@@ -132,9 +132,9 @@ const Coordinators = ({ refProp }) => {
             },
             {
               name: "Discord",
-              id: "discord.gg/QJj4qAKJ",
+              id: "https://discord.gg/j9xCqqqa",
               icon: <FaDiscord size={20} className="text-emerald-400" />,
-              link: "https://discord.com/invite/QJj4qAKJ",
+              link: "https://discord.gg/j9xCqqqa",
             },
           ].map((social, index) => (
             <a
