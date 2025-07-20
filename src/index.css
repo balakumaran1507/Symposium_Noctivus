@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* Font Family */
+.font-funnel {
+  font-family: "Funnel Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+/* Font Weights */
+.font-funnel-light {
+  font-weight: 300;
+}
+.font-funnel-regular {
+  font-weight: 400;
+}
+.font-funnel-medium {
+  font-weight: 500;
+}
+.font-funnel-semibold {
+  font-weight: 600;
+}
+.font-funnel-bold {
+  font-weight: 700;
+}
+.font-funnel-black {
+  font-weight: 900; /* 800 → 900 for actual black weight */
+}
+
+/* Scroll Reveal Text */
+.scroll-reveal-text {
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* Scroll-Reveal Animation Words */
+.word {
+  display: inline-block;
+}
+
+/* Hide Scrollbar - Cross Browser */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Edge/IE */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Base Styling for Layout */
+html,
+body {
+  background-color: #000;
+  color: #ffffff;
+  overscroll-behavior: none;
+}
+
+/* Cursor Customization */
+body {
+  cursor: none;
+}
+
+.cursor-auto * {
+  cursor: auto !important;
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shine-animation {
+  animation: shine 2s linear infinite;
+  background-size: 200% 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.5) 10%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.5) 90%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  will-change: background-position;
+}
+
+/* Motion Preference Support */
+@media (prefers-reduced-motion: reduce) {
+  .shine-animation {
+    animation: none !important;
+  }
+}
