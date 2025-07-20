@@ -34,7 +34,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="text-white text-center font-funnel z-10 w-full flex flex-row justify-center items-center gap-x-6 sm:gap-x-10">
+    <div className="text-white text-center font-funnel z-10 w-full flex flex-row justify-center items-center gap-x-6 md:gap-x-7">
       {[
         { label: "Days", value: timeLeft.days },
         { label: "Hrs", value: timeLeft.hours },
@@ -42,7 +42,7 @@ const Countdown = () => {
         { label: "Sec", value: timeLeft.seconds },
       ].map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
-          <div className="text-4xl md:text-5xl font-medium">{item.value}</div>
+          <div className="text-4xl md:text-4xl">{item.value}</div>
           <div className="text-sm md:text-xl text-white/50 uppercase">
             {item.label}
           </div>

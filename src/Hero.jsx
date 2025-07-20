@@ -22,30 +22,30 @@ const Hero = () => {
       <img
         src="/Logo.webp"
         alt="Noctivus Logo"
-        className="absolute left-1/2 transform -translate-x-1/2 top-10 md:top-0 w-[400px] md:w-[440px] max-w-full z-50 mx-auto mix-blend-screen"
+        className="absolute left-1/2 transform -translate-x-1/2 top-30 md:top-0 w-[360px] max-w-full z-50 mx-auto mix-blend-screen"
       />
 
       {/* Title */}
-      <div className="absolute top-100 md:top-90 w-full text-center text-white text-4xl md:text-4xl font-funnel font-medium">
+      <div className="absolute top-105 md:top-72 w-full text-center text-white text-3xl md:text-3xl font-funnel">
         Noctivus '25
       </div>
 
       {/* Countdown - Lazy Loaded */}
-      <div className="absolute top-120 md:top-105 left-1/2 transform -translate-x-1/2">
+      <div className="absolute top-120 md:top-85 left-1/2 transform -translate-x-1/2">
         <Countdown />
       </div>
 
       {/* Register Button with Lazy-loaded ShinyText */}
       <button
         onClick={() => navigate("/codeofconduct")}
-        className="absolute top-150 md:top-130 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-full bg-white/5 border border-white/20 hover:bg-white/10 pt-3 text-white font-funnel leading-none"
+        className="absolute top-145 md:top-107 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-full bg-white/2 border border-white/20 hover:bg-white/5 pt-3 text-white font-funnel leading-none"
       >
         <Suspense fallback={<span className="text-white">Loading...</span>}>
           <ShinyText
             text="REGISTER NOW"
             disabled={false}
             speed={5}
-            className="text-md md:text-lg"
+            className="text-sm"
           />
         </Suspense>
       </button>

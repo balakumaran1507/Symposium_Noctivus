@@ -34,7 +34,7 @@ const SpotlightCard = ({
       }}
       onMouseEnter={() => setOpacity(0.6)}
       onMouseLeave={() => setOpacity(0)}
-      className={`relative rounded-2xl border border-white/10 bg-white/5 overflow-hidden ${padding} ${className}`}
+      className={`relative rounded-2xl border border-white/10 bg-white/2 overflow-hidden ${padding} ${className}`}
     >
       <div
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 ease-in-out"

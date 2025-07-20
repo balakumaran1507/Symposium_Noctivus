@@ -17,16 +17,16 @@ const EventPopup = ({ event, onClose }) => {
 
   const renderTextBlock = (title, content) => (
     <div className="space-y-1">
-      <h3 className="text-md font-medium">{title}</h3>
-      <p className="text-md text-neutral-300 whitespace-pre-line">{content}</p>
+      <h3 className="text-sm font-medium">{title}</h3>
+      <p className="text-sm text-neutral-300 whitespace-pre-line">{content}</p>
     </div>
   );
 
   const renderListBlock = (title, list) =>
     list?.length > 0 ? (
       <div>
-        <h3 className="text-md font-medium">{title}</h3>
-        <ul className="list-disc list-inside text-md text-neutral-300 space-y-1">
+        <h3 className="text-sm font-medium">{title}</h3>
+        <ul className="list-disc list-inside text-sm text-neutral-300 space-y-1">
           {list.map((item, i) => (
             <li key={i}>{item}</li>
           ))}
@@ -58,28 +58,33 @@ const EventPopup = ({ event, onClose }) => {
               opacity: 0,
               transition: { duration: 0.15 },
             }}
-            className="bg-neutral-900 font-funnel text-white rounded-2xl p-6 w-[90%] max-w-lg relative space-y-4 max-h-[90vh] overflow-y-auto scrollbar-hide"
+            className="bg-neutral-950 font-funnel text-white rounded-2xl w-[90%] max-w-lg relative max-h-[90vh] overflow-hidden" // changed here
           >
+            {/* Close button (fixed inside popup) */}
             <button
               onClick={onClose}
-              className="absolute top-4 right-5 text-white text-3xl w-10 h-10 flex items-center justify-center rounded-full transition duration-100 hover:bg-neutral-700"
+              className="absolute top-4 right-5 text-white text-2xl w-10 h-10 flex items-center justify-center rounded-full transition duration-100 hover:bg-neutral-700 z-10"
             >
               &times;
             </button>
 
-            <h2 className="text-xl font-semibold">{event.title}</h2>
-            {event.schedule && renderTextBlock("Schedule", event.schedule)}
-            {event.teamSize && renderTextBlock("Team Size", event.teamSize)}
-            {event.overview && renderTextBlock("Overview", event.overview)}
-            {event.format && renderTextBlock("Format", event.format)}
-            {renderListBlock("Rules", event.rules)}
-            {renderListBlock("Topics", event.topics)}
-            {renderListBlock(
-              "Submission Guidelines",
-              event.submissionGuidelines
-            )}
-            {renderListBlock("Reporting Guidelines", event.reporting)}
-            {renderListBlock("Prohibited Actions", event.prohibited)}
+            {/* Scrollable content wrapper */}
+            {/* Scrollable content wrapper */}
+            <div className="p-6 space-y-4 overflow-y-auto max-h-[90vh] scrollbar-hide">
+              <h2 className="text-sm font-semibold">{event.title}</h2>
+              {event.schedule && renderTextBlock("Schedule", event.schedule)}
+              {event.teamSize && renderTextBlock("Team Size", event.teamSize)}
+              {event.overview && renderTextBlock("Overview", event.overview)}
+              {event.format && renderTextBlock("Format", event.format)}
+              {renderListBlock("Rules", event.rules)}
+              {renderListBlock("Topics", event.topics)}
+              {renderListBlock(
+                "Submission Guidelines",
+                event.submissionGuidelines
+              )}
+              {renderListBlock("Reporting Guidelines", event.reporting)}
+              {renderListBlock("Prohibited Actions", event.prohibited)}
+            </div>
           </motion.div>
         </motion.div>
       )}

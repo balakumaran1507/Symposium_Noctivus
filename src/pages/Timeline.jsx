@@ -69,7 +69,7 @@ const styleMap = {
 
 const events = [
   {
-    title: "inauguration",
+    title: "Inauguration",
     time: "8 – 9:45",
     start: 8,
     end: 9.75,
@@ -226,12 +226,10 @@ const events = [
   },
 ];
 
-
-
 const startHour = 8;
 const endHour = 15.5; // 3:30 PM
 const totalHalfHours = (endHour - startHour) * 2;
-const rowHeight = 60;
+const rowHeight = 48;
 
 function assignRows(events) {
   const tracks = [];
@@ -251,14 +249,14 @@ const Timeline = () => {
   const containerHeight = maxRows * rowHeight;
 
   return (
-    <section className="px-10 md:px-20 lg:px-32 font-funnel text-white w-full">
-      <p className="text-md font-funnel text-center pt-20 pb-10">
+    <section className="px-10 md:px-20 lg:px-32 font-funnel text-white select-none w-full">
+      <p className="text-sm font-funnel text-center pt-20 pb-10">
         EVENT TIMELINE
       </p>
       <hr className="border-0.5 border-white/20 w-full mb-6" />
 
       <div className="w-full overflow-x-auto">
-        <div className="rounded-lg border border-white/20 bg-white/5 p-6 px-12 min-w-[1280px]">
+        <div className="rounded-lg border border-white/20 bg-white/2 p-6 px-12 min-w-[1080px]">
           {/* Time Labels */}
           <div className="relative w-full mb-6" style={{ height: "40px" }}>
             {[...Array(totalHalfHours + 1)].map((_, i) => {
@@ -269,7 +267,7 @@ const Timeline = () => {
               return (
                 <div
                   key={i}
-                  className="absolute text-white/70 text-sm uppercase transform -translate-x-1/2"
+                  className="absolute text-white/70 text-xs uppercase transform -translate-x-1/2"
                   style={{ left: `${(i / totalHalfHours) * 100}%` }}
                 >
                   {hour12}:{min}
@@ -314,12 +312,12 @@ const Timeline = () => {
                     left: `${leftPercent}%`,
                     width: `${widthPercent}%`,
                     top: `${top}px`,
-                    height: "48px",
+                    height: "40px",
                   }}
                 >
                   <div className="flex items-center gap-3 text-base h-full">
                     <Icon className={`w-5 h-5 shrink-0 ${icon}`} />
-                    <span className="truncate text-sm">{event.title}</span>
+                    <span className="truncate text-xs">{event.title}</span>
                   </div>
                 </div>
               );

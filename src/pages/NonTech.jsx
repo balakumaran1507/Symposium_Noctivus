@@ -11,7 +11,7 @@ const events = [
     description: "Guess The Beats",
     date: "Aug 21, 2025",
     venue: "AV Room",
-    schedule: "10:00 AM – 12:45 AM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "2 to 4 Members",
     overview:
       "A thrilling music-based non-tech event with three engaging rounds: reversed BGMs, audio puzzles, and visual clues to challenge your senses.",
@@ -94,29 +94,28 @@ const events = [
   },
 ];
 
-
 const NonTech = ({ refProp }) => {
   const [selectedEvent, setSelectedEvent] = useState(null);
 
   return (
     <section ref={refProp} className="px-10 md:px-20 lg:px-32 text-white pb-20">
-      <p className="text-md font-funnel text-center pt-20 pb-10">
+      <p className="text-sm font-funnel text-center pt-20 pb-10">
         NON-TECHNICAL EVENTS
       </p>
       <hr className="border-0.5 border-white/20 w-full" />
 
       <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-y-10 mt-10">
         {events.map((event, index) => (
-          <div key={index} className="w-[200px] h-[180px] font-funnel">
+          <div key={index} className="w-[180px] h-[180px] font-funnel">
             <SpotlightCard
               className="w-full h-full cursor-pointer transition-transform hover:scale-[1.03]"
               spotlightColor="rgba(80, 200, 130, 0.4)"
               onClick={() => setSelectedEvent(event)}
             >
-              <div className="flex flex-col items-center justify-center text-center gap-1 h-full px-1.5 py-2">
+              <div className="flex flex-col items-center justify-center text-center h-full px-1.5 py-2">
                 <div>{event.icon}</div>
-                <h3 className="text-md">{event.title}</h3>
-                <p className="text-sm text-white/70">{event.description}</p>
+                <h3 className="text-sm pt-3">{event.title}</h3>
+                <p className="text-sm text-white/50">{event.description}</p>
               </div>
             </SpotlightCard>
           </div>

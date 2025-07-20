@@ -361,7 +361,7 @@ function BusRoute() {
       <div className="mx-auto">
         {/* Header */}
         <div className="text-center pt-20 pb-10">
-          <h1 className="text-md mb-2">BUS ROUTES</h1>
+          <h1 className="text-sm mb-2">BUS ROUTES</h1>
         </div>
 
         <hr className="border-0.5 border-white/20 w-full mb-6" />
@@ -380,7 +380,7 @@ function BusRoute() {
               }}
               onFocus={() => setShowSuggestions(true)} // Show on focus
               onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
-              className="w-full px-4 py-3 rounded-lg bg-white/5 text-white border border-white/20 placeholder-white/50 focus:outline-none text-sm"
+              className="w-full px-4 py-3 rounded-lg bg-white/2 text-white border border-white/20 placeholder-white/50 focus:outline-none text-sm"
             />
             {showSuggestions && inputQuery.trim() && (
               <ul className="absolute z-20 w-full mt-1 bg-neutral-900 border border-white/20 rounded-lg max-h-48 overflow-y-auto">
@@ -410,7 +410,7 @@ function BusRoute() {
                 setSelectedRoute(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full appearance-none px-4 py-3 pr-10 rounded-lg bg-white/5 text-white border border-white/20 focus:outline-none text-sm"
+              className="w-full appearance-none px-4 py-3 pr-10 rounded-lg bg-white/2 text-white border border-white/20 focus:outline-none text-sm"
             >
               <option value="None" className="bg-neutral-900 text-white">
                 Select Route
@@ -434,7 +434,7 @@ function BusRoute() {
           {/* Search Button */}
           <button
             onClick={handleSearch}
-            className="bg-white hover:bg-white/70 text-black px-4 py-1 rounded-lg transition text-md"
+            className="bg-white hover:bg-white/70 text-black px-4 py-3 rounded-lg transition text-sm"
           >
             Search
           </button>
@@ -444,7 +444,7 @@ function BusRoute() {
         <a
           href="/busroutes.pdf"
           download
-          className="mb-6 mx-auto justify-center w-full lg:w-fit flex items-center gap-2 px-5 py-2 bg-white/5 hover:bg-white/20 border border-white/20 text-white/70 rounded-lg text-md font-medium transition-all duration-300"
+          className="mb-6 mx-auto justify-center w-full lg:w-fit flex items-center gap-2 px-5 py-2 bg-white/2 hover:bg-white/10 border border-white/20 text-white/70 rounded-lg text-sm font-medium transition-all duration-300"
         >
           <FiDownload size={18} className="text-emerald-400" />
           Download PDF
@@ -464,9 +464,9 @@ function BusRoute() {
             {paginatedRoutes.map(([routeName, stops]) => (
               <div
                 key={routeName}
-                className="rounded-lg border border-white/20 bg-white/5 p-5 px-12 backdrop-blur-sm"
+                className="rounded-lg border border-white/20 bg-white/2 p-5 px-12 backdrop-blur-sm"
               >
-                <h2 className="text-lg mb-6 text-emerald-400">{routeName}</h2>
+                <h2 className="text-sm mb-6 text-emerald-400">{routeName}</h2>
                 <ul className="space-y-3 text-white/80">
                   {stops
                     .filter(({ stop }) =>
@@ -477,11 +477,9 @@ function BusRoute() {
                         key={index}
                         className="flex justify-between border-b border-white/10 pb-2"
                       >
-                        <span className="text-md">{stop}</span>
+                        <span className="text-sm">{stop}</span>
                         {time && (
-                          <span className="text-base text-white/50">
-                            {time}
-                          </span>
+                          <span className="text-sm text-white/50">{time}</span>
                         )}
                       </li>
                     ))}

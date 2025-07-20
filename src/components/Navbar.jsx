@@ -12,36 +12,36 @@ const Navbar = ({
 }) => {
   const items = [
     {
-      icon: <VscHome className="text-xl sm:text-2xl" />,
+      icon: <VscHome className="text-lg md:text-xl" />,
       label: "About",
       onClick: scrollToAbout,
     },
     {
-      icon: <LuBug className="text-xl sm:text-2xl stroke-[1.5]" />,
+      icon: <LuBug className="text-lg md:text-xl stroke-[1.5]" />,
       label: "Tech",
       onClick: scrollToTech,
     },
     {
       icon: (
-        <IoExtensionPuzzleOutline className="text-xl sm:text-2xl stroke-[1.5]" />
+        <IoExtensionPuzzleOutline className="text-lg md:text-xl stroke-[1.5]" />
       ),
       label: "Non-Tech",
       onClick: scrollToNtech,
     },
     {
-      icon: <VscTools className="text-xl sm:text-2xl" />,
+      icon: <VscTools className="text-lg md:text-xl" />,
       label: "Workshop",
       onClick: scrollToWorkshop,
     },
     {
-      icon: <VscMail className="text-xl sm:text-2xl" />,
+      icon: <VscMail className="text-lg md:text-xl" />,
       label: "Contact",
       onClick: scrollToContact,
     },
   ];
 
   return (
-    <Dock items={items} panelHeight={68} baseItemSize={50} magnification={70} />
+    <Dock items={items} panelHeight={60} baseItemSize={40} magnification={50} />
   );
 };
 

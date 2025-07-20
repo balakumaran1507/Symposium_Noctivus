@@ -41,7 +41,7 @@ const Coordinators = ({ refProp }) => {
       className="min-h-screen px-10 md:px-20 lg:px-32 text-white py-10 space-y-12"
     >
       <div>
-        <p className="text-md font-funnel text-center pt-20 pb-10">
+        <p className="text-sm font-funnel text-center pt-20 pb-10">
           COORDINATORS
         </p>
         <hr className="border-0.5 border-white/20 w-full mb-6" />
@@ -49,7 +49,7 @@ const Coordinators = ({ refProp }) => {
 
       {/* Staff Coordinators */}
       <div className="space-y-4 font-funnel">
-        <h3 className="text-md text-white/50">Staff Coordinators</h3>
+        <h3 className="text-sm text-white/50">Staff Coordinators</h3>
         <div className="grid md:grid-cols-2 gap-6">
           {coordinators.staff.map((person, index) => (
             <SpotlightCard
@@ -61,7 +61,7 @@ const Coordinators = ({ refProp }) => {
                 <div className="rounded-full bg-white/10 flex items-center justify-center ms-2 w-14 min-w-[3.5rem] aspect-square">
                   <FaRegUser size={20} />
                 </div>
-                <div className="text-left text-md">
+                <div className="text-left text-sm">
                   <h3 className="text-white">{person.name}</h3>
                   <p className="text-white/60">{person.email}</p>
                   <p className="text-white/60">{person.designation}</p>
@@ -74,7 +74,7 @@ const Coordinators = ({ refProp }) => {
 
       {/* Student Coordinators */}
       <div className="space-y-6 font-funnel">
-        <h3 className="text-md text-white/50">Student Coordinators</h3>
+        <h3 className="text-sm text-white/50">Student Coordinators</h3>
 
         {/* Grouped Helper */}
         {[
@@ -83,7 +83,7 @@ const Coordinators = ({ refProp }) => {
           { title: "Registration", people: registration },
         ].map(({ title, people }, idx) => (
           <div key={idx} className="space-y-2">
-            <h4 className="text-md text-white mb-4 text-center">{title}</h4>
+            <h4 className="text-sm text-white mb-4 text-center">{title}</h4>
             <div className="grid sm:grid-cols-2 gap-6">
               {people.map((person, i) => (
                 <SpotlightCard
@@ -95,7 +95,7 @@ const Coordinators = ({ refProp }) => {
                     <div className="rounded-full bg-white/10 flex items-center justify-center w-10 ms-2 min-w-[3.5rem] aspect-square">
                       <FaRegUser size={18} />
                     </div>
-                    <div className="text-left text-md">
+                    <div className="text-left text-sm">
                       <h3 className="text-white">{person.name}</h3>
                       <p className="text-white/60">{person.phone}</p>
                     </div>
@@ -109,7 +109,7 @@ const Coordinators = ({ refProp }) => {
 
       {/* Social Media Cards */}
       <div className="space-y-4 font-funnel">
-        <h4 className="text-md text-white text-center">Social Media</h4>
+        <h4 className="text-sm text-white text-center">Social Media</h4>
         <div className="grid sm:grid-cols-2 gap-6">
           {[
             {
@@ -152,7 +152,7 @@ const Coordinators = ({ refProp }) => {
                   <div className="rounded-full bg-emerald-400/10 flex items-center justify-center w-10 ms-2 min-w-[3.5rem] aspect-square">
                     {social.icon}
                   </div>
-                  <div className="text-left text-md flex-1 min-w-0">
+                  <div className="text-left text-sm flex-1 min-w-0">
                     <h3 className="text-white">{social.name}</h3>
                     <p
                       className="text-white/60 truncate max-w-[200px]"

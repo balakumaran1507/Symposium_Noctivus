@@ -1,6 +1,9 @@
 import React, { lazy, Suspense } from "react";
 import SpotlightCard from "../components/SpotlightCard";
-import { FaRegCalendarCheck } from "react-icons/fa";
+import { LuBug } from "react-icons/lu";
+import { IoFlagOutline } from "react-icons/io5";
+import { BsNut } from "react-icons/bs";
+import { IoCodeSlashOutline } from "react-icons/io5";
 import { IoArrowBackOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
@@ -11,33 +14,39 @@ const RegisterCards = () => {
 
   const events = [
     {
-      name:"Bug Bounty",
-      description:"Hunt down vulnerabilities, patch up chaos — unleash your inner hacker.",
-      link:"https://forms.gle/w6ZjGgxvsBNmQftDA"
-
+      name: "Bug Bounty",
+      icon: <LuBug size={22} className="text-white/80" />,
+      description:
+        "Hunt down software flaws, exploit vulnerabilities, and prove your hacking chops. A thrilling ride for code sleuths!",
+      link: "https://forms.gle/w6ZjGgxvsBNmQftDA",
     },
     {
       name: "Capture the Flag",
+      icon: <IoFlagOutline size={22} className="text-white/80" />,
       description:
-        "Test your cybersecurity skills with logic-based challenges.",
+        "Dive into logical puzzles and real-world cyber scenarios. Perfect for security nerds and puzzle lovers alike.",
       link: "https://forms.gle/XkjNdYmh77vT6U9P8",
     },
     {
       name: "Workshop",
-      description: "Boost your tech skills with expert-led sessions.",
+      icon: <BsNut size={22} className="text-white/80" />,
+      description:
+        "Learn directly from industry pros and level up your tech game. Hands-on, high-impact, highly awesome.",
       link: "https://forms.gle/x6HmJ27bLMQHcfkC9",
     },
     {
       name: "Tech & Non-Tech Events",
-      description: "From coding to E-sports — there’s something for all.",
+      icon: <IoCodeSlashOutline size={22} className="text-white/80" />,
+      description:
+        "From epic coding battles to wild gaming tournaments — there’s something for everyone to flex their skills or just have fun.",
       link: "https://forms.gle/RhyVE1Sb9XncoYt96",
     },
-    
   ];
 
   return (
     <div className="relative min-h-screen w-full bg-black text-white font-funnel overflow-hidden">
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      {/* Aurora Background */}
+      <div className="absolute opacity-40 inset-0 z-0 pointer-events-none">
         <Suspense fallback={null}>
           <Aurora
             colorStops={["#3A29FF", "#00FFFF"]}
@@ -48,46 +57,38 @@ const RegisterCards = () => {
         </Suspense>
       </div>
 
-      {/* Gradient Top */}
-      <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-10" />
-
       {/* Back Button */}
       <button
-        onClick={() => {
-          console.log("Back clicked");
-          navigate("/");
-        }}
-        className="top-10 left-10 z-50 fixed pointer-events-auto flex items-center gap-2 p-3 rounded-full bg-white/10 text-white text-sm hover:bg-white/20 transition-all duration-300"
+        onClick={() => navigate("/")}
+        className="fixed top-10 left-10 z-30 flex items-center gap-2 p-3 rounded-full bg-white/10 text-white text-sm hover:bg-white/20 transition-all duration-300"
       >
-        <IoArrowBackOutline className="text-lg" />
+        <IoArrowBackOutline className="text-sm" />
       </button>
 
-      {/* Foreground Content */}
-      <section className="relative z-20 flex flex-col items-center justify-center px-6 py-16 min-h-screen">
-        <h2 className="text-xl md:text-xl mb-12 text-center text-white/90">
-          Register for Your Event
-        </h2>
-        
+      {/* Fixed Heading (Navbar Style) */}
+      <div className="fixed top-0 left-0 w-full z-20 px-10 md:px-20 lg:px-40 pt-20 pb-4 backdrop-blur-3xl">
+        <h2 className="text-sm text-center mb-6">REGISTER EVENTS</h2>
+        <hr className="border-0.5 border-white/20 w-full" />
+      </div>
 
-        <div className="grid gap-10 w-full max-w-4xl sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+      {/* Content Section */}
+      <section className="relative z-10 px-20 md:px-40 lg:px-40 pt-[160px] pb-16">
+        {/* Cards Grid */}
+        <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {events.map((event, index) => (
             <SpotlightCard
               key={index}
-              spotlightColor="rgba(0, 150, 255, 0.3)"
-              className="custom-spotlight-card p-6 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 flex flex-col justify-between hover:scale-[1.02] transition-all duration-300 min-w-s"
+              spotlightColor="rgba(80, 200, 130, 0.4)"
+              className="p-4 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 flex flex-col justify-between hover:scale-[1.03] transition-all duration-300"
             >
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                    <FaRegCalendarCheck size={22} className="text-white/80" />
+                    {event.icon}
                   </div>
-                  <h3 className="text-white text-lg md:text-lg font-semibold">
-                    {event.name}
-                  </h3>
+                  <h3 className="text-white text-sm">{event.name}</h3>
                 </div>
-                <p className="text-white/60 text-sm md:text-base leading-6">
-                  {event.description}
-                </p>
+                <p className="text-white/60 text-sm">{event.description}</p>
               </div>
 
               <a
@@ -101,12 +102,11 @@ const RegisterCards = () => {
             </SpotlightCard>
           ))}
         </div>
-                {/* Rules Section */}
-        <div className="text-white/80 text-base md:text-lg mt-12 max-w-2xl space-y-4 leading-relaxed">
-          <p className="text-white text-lg font-semibold text-left mb-2">
-            Note:
-          </p>
-          <ul className="list-decimal list-inside space-y-3 pl-2">
+
+        {/* Rules Section */}
+        <div className="text-white text-sm mt-12 w-full space-y-4 leading-relaxed">
+          <p className="text-left mb-2">Note:</p>
+          <ul className="list-disc list-inside text-white/60 space-y-3">
             <li>
               All tech event participants must bring their own devices to ensure
               smooth and uninterrupted participation.
@@ -115,22 +115,26 @@ const RegisterCards = () => {
               Participants can register for only one event from the above list.
             </li>
             <li>
-              If not attending the CTF, participants may register for any two of
-              the remaining technical events.
+              If not attending the CTF or Bug Bounty, participants may register
+              for any two of the remaining events.
             </li>
             <li>
-              Registration must be done individually. For events that allow team
-              participation, participants can form teams at the venue on the day
-              of the event.
+              Participants Registered for CTF or Bug Bounty, will not be
+              eligible to participate in any other events.
             </li>
             <li>
-              Participants who register for the workshop will not be eligible to
-              participate in any other event.
+              Registration must be done individually. For team-based events,
+              Participants can form teams at the venue on the event day.
             </li>
             <li>
-              Food will be provided for all registered participants, with both
-              Veg and Non-Veg options available.
+              Participants who register for the Workshop will not be eligible
+              for any other event.
             </li>
+            <li>
+              Food will be provided for all registered participants with both
+              Veg & Non-Veg options available.
+            </li>
+            <li>A Tools Expo will be Available during the Event.</li>
           </ul>
         </div>
       </section>

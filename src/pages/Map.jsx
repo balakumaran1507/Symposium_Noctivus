@@ -4,7 +4,7 @@ import React from "react";
 const Map = () => {
   return (
     <section className="px-10 sm:px-10 md:px-20 lg:px-32 font-funnel text-white w-full">
-      <p className="text-md font-funnel text-center pt-20 pb-10">FIND US</p>
+      <p className="text-sm font-funnel text-center pt-20 pb-10">FIND US</p>
       <hr className="border-0.5 border-white/20 w-full mb-6" />
 
       <div className="w-full overflow-hidden rounded-2xl border border-white/20 bg-white/5 backdrop-blur-sm">

@@ -42,21 +42,21 @@ const Brochure = () => {
   };
 
   const slides = [
-  { src: "/1.jpg", alt: "Brochure Page 1" },
-  { src: "/2.jpg", alt: "Brochure Page 2" },
-  { src: "/3.jpg", alt: "Brochure Page 3" },
-  { src: "/4.jpg", alt: "Brochure Page 4" },
-  { src: "/5.jpg", alt: "Brochure Page 5" },
-  { src: "/6.jpg", alt: "Brochure Page 6" },
-  { src: "/7.jpg", alt: "Brochure Page 7" },
-  { src: "/8.jpg", alt: "Brochure Page 8" },
-  { src: "/9.png", alt: "Brochure Page 9" },
-  { src: "/10.png", alt: "Brochure Page 10" },
-];
+    { src: "/1.jpg", alt: "Brochure Page 1" },
+    { src: "/2.jpg", alt: "Brochure Page 2" },
+    { src: "/3.jpg", alt: "Brochure Page 3" },
+    { src: "/4.jpg", alt: "Brochure Page 4" },
+    { src: "/5.jpg", alt: "Brochure Page 5" },
+    { src: "/6.jpg", alt: "Brochure Page 6" },
+    { src: "/7.jpg", alt: "Brochure Page 7" },
+    { src: "/8.jpg", alt: "Brochure Page 8" },
+    { src: "/9.png", alt: "Brochure Page 9" },
+    { src: "/10.png", alt: "Brochure Page 10" },
+  ];
   return (
     <div className="flex flex-col items-center px-10 md:px-20 lg:px-32 pt-16 w-full">
       <div className="w-full font-funnel text-blue-50 flex flex-col items-center">
-        <p className="text-md font-funnel text-center pt-20 pb-10">BROCHURES</p>
+        <p className="text-sm font-funnel text-center pt-20 pb-10">BROCHURES</p>
         <hr className="border-t border-white/20 w-full mb-6" />
 
         {/* Carousel */}
@@ -109,7 +109,7 @@ const Brochure = () => {
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full ease-in-out duration-500 ${
+              className={`w-[5px] h-[5px] rounded-full ease-in-out duration-500 ${
                 index === currentIndex ? "bg-white scale-125" : "bg-white/30"
               }`}
             />
@@ -120,7 +120,7 @@ const Brochure = () => {
         <a
           href="/Noctivus25.pdf"
           download="Noctivus25.pdf"
-          className="mt-6 inline-flex text-md items-center gap-2 px-5 py-2 bg-white/5 hover:bg-white/20 border border-white/20 text-white/70 rounded-lg lg:w-fit w-full justify-center text-md transition-all duration-300"
+          className="mt-6 inline-flex text-sm items-center gap-2 px-5 py-2 bg-white/5 hover:bg-white/20 border border-white/20 text-white/70 rounded-lg lg:w-fit w-full justify-center text-md transition-all duration-300"
         >
           <FiDownload size={18} className="text-emerald-400" />
           DOWNLOAD BROCHURE (OD)
