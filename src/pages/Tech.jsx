@@ -48,7 +48,7 @@ const events = [
     icon: <VscCode className="text-blue-400 text-4xl" />,
     description: "Vibe Coding",
     schedule: "10:00 AM – 12:45 PM / 12:45 PM - 3:30 PM",
-    teamSize: "2 Members",
+    teamSize: "1 to 2 Members",
     overview:
       "An AI-powered mobile app-building challenge using any tech stack under a surprise topic",
     rules: [
