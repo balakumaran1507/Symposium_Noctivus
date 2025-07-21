@@ -1,7 +1,7 @@
 // EventPopup.jsx
 import React, { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { FiDownload } from "react-icons/fi";
 const EventPopup = ({ event, onClose }) => {
   const popupRef = useRef(null);
 
@@ -84,6 +84,18 @@ const EventPopup = ({ event, onClose }) => {
               )}
               {renderListBlock("Reporting Guidelines", event.reporting)}
               {renderListBlock("Prohibited Actions", event.prohibited)}
+              {event.download && (
+                <div className="flex justify-center">
+                  <a
+                    href={event.download.filePath}
+                    download={event.download.fileName}
+                    className="inline-flex items-center gap-2 text-emerald-400 bg-white/5 hover:bg-white/10 border border-white/20 text-white/70 rounded-lg text-sm font-medium px-4 py-2 transition-all duration-300"
+                  >
+                    <FiDownload className="text-base text-emerald-400" />
+                    {event.download.label}
+                  </a>
+                </div>
+              )}
             </div>
           </motion.div>
         </motion.div>

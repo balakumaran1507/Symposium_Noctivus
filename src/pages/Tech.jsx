@@ -86,15 +86,34 @@ const events = [
     schedule: "10:00 AM – 12:45 PM",
     teamSize: "1 to 2 Members",
     overview:
-      "Present your original research and technical ideas with clarity and confidence in a structured presentation",
-    rules: [
-      "Use of the official PPT template is mandatory for all submissions",
-      "Each team or individual gets 3 minutes to present and 2 minutes for Q&A",
-      "Presentations must be clear, concise, and follow a logical flow",
-      "Only one project per team or individual is allowed",
-      "Plagiarism will lead to immediate disqualification; originality is a must",
-      "Maintain professional behavior and academic integrity throughout",
-      "All presentations must be submitted before the event begins; late submissions will not be accepted",
+      "Present your original research and technical ideas with clarity and confidence in a structured presentation.",
+    download: {
+    label: "Paper format",
+    fileName: "PaperToPixel.pdf",
+    filePath: "/ppttemp.pdf"
+    },
+      rules: [
+      "Use of the official PPT template is mandatory for all submissions.",
+      "Each team or individual gets 3 minutes to present and 2 minutes for Q&A.",
+      "Presentations must be clear, concise, and follow a logical flow.",
+      "Only one project per team or individual is allowed.",
+      "Plagiarism will lead to immediate disqualification; originality is a must.",
+      "Maintain professional behavior and academic integrity throughout.",
+      <>
+        All abstracts must be submitted on or before <strong>25th July</strong> to{" "}
+        <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">
+          ops@noctivus.pro
+        </a>.
+      </>,
+      <>
+        Final Paper must be submitted before <strong>30th July</strong> to{" "}
+        <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">
+          ops@noctivus.pro 
+        </a> with registration proof.
+      </>,
+      "All submissions are allowed only after successful registration.",
+      "All presentations must be submitted before the event begins; late submissions will not be accepted.",
+
     ],
     topics: [
       "AI & Cybersecurity Fusion",
@@ -104,7 +123,8 @@ const events = [
       "From Ideas to APK",
       "Emerging Technologies",
     ],
-  },
+
+  }
 ];
 
 const Tech = ({ refProp }) => {
