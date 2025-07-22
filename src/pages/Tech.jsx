@@ -47,7 +47,7 @@ const events = [
     title: "Beat Overflow",
     icon: <VscCode className="text-blue-400 text-4xl" />,
     description: "Vibe Coding",
-    schedule: "10:00 AM – 12:45 PM / 12:45 PM - 3:30 PM",
+    schedule: "10:00 AM – 12:45 PM",
     teamSize: "1 to 2 Members",
     overview:
       "An AI-powered mobile app-building challenge using any tech stack under a surprise topic",
@@ -89,8 +89,8 @@ const events = [
       "Present your original research and technical ideas with clarity and confidence in a structured presentation.",
     download: {
     label: "Paper format",
-    fileName: "PaperToPixel.pdf",
-    filePath: "/ppttemp.pdf"
+    fileName: "PaperToPixel.pptx",
+    filePath: "/ptp.pptx"
     },
       rules: [
       "Use of the official PPT template is mandatory for all submissions.",
@@ -105,6 +105,7 @@ const events = [
           ops@noctivus.pro
         </a>.
       </>,
+      "The abstract must be approximately 150 words, written in Times New Roman, font size 14.",
       <>
         Final Paper must be submitted before <strong>30th July</strong> to{" "}
         <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">

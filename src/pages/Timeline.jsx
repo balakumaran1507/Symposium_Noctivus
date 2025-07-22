@@ -100,6 +100,14 @@ const events = [
     color: "yellow",
     icon: FiAlertCircle,
   },
+    {
+    title: "Beat Overflow",
+    time: "10 – 12:45",
+    start: 10,
+    end: 12.75,
+    color: "indigo",
+    icon: FiCode,
+  },
 
   // Multi-slot events (First slot: 10 – 11:15, Second slot: 11:30 – 12:45)
 
@@ -134,22 +142,6 @@ const events = [
     end: 12.75,
     color: "green",
     icon: FiFileText,
-  },
-  {
-    title: "Beat Overflow",
-    time: "10 – 11:15",
-    start: 10,
-    end: 11.25,
-    color: "indigo",
-    icon: FiCode,
-  },
-  {
-    title: "Beat Overflow",
-    time: "11:30 – 12:45",
-    start: 11.5,
-    end: 12.75,
-    color: "indigo",
-    icon: FiCode,
   },
   {
     title: "E-sports",
@@ -215,14 +207,6 @@ const events = [
     end: 15.5,
     color: "purple",
     icon: FiCpu,
-  },
-  {
-    title: "Beat Overflow",
-    time: "1:45 – 3:30",
-    start: 13.75,
-    end: 15.5,
-    color: "indigo",
-    icon: FiCode,
   },
 ];
 
