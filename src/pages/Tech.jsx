@@ -96,7 +96,7 @@ const events = [
       "Use of the official PPT template is mandatory for all submissions.",
       "Each team or individual gets 3 minutes to present and 2 minutes for Q&A.",
       "Presentations must be clear, concise, and follow a logical flow.",
-      "Only one project per team or individual is allowed.",
+      "Each team or individual must submit only one paper",
       "Plagiarism will lead to immediate disqualification; originality is a must.",
       "Maintain professional behavior and academic integrity throughout.",
       <>
