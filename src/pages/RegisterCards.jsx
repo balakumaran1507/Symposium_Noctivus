@@ -41,6 +41,13 @@ const RegisterCards = () => {
         "From epic coding battles to wild gaming tournaments — there’s something for everyone to flex their skills or just have fun.",
       link: "https://forms.gle/RhyVE1Sb9XncoYt96",
     },
+    {
+      name: "E-Sports",
+      icon: <IoCodeSlashOutline size={22} className="text-white/80" />,
+      description:
+        "Register now for our online eSports event!",
+      link: "https://forms.gle/7zBTR2zK7pAAdbjKA",
+    },
   ];
 
   return (

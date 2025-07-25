@@ -100,7 +100,7 @@ const events = [
       "Plagiarism will lead to immediate disqualification; originality is a must.",
       "Maintain professional behavior and academic integrity throughout.",
       <>
-        All abstracts must be submitted on or before <strong>25th July</strong> to{" "}
+        All abstracts must be submitted on or before <strong>28th July</strong> to{" "}
         <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">
           ops@noctivus.pro
         </a>.
@@ -114,7 +114,6 @@ const events = [
       </>,
       "All submissions are allowed only after successful registration.",
       "All presentations must be submitted before the event begins; late submissions will not be accepted.",
-
     ],
     topics: [
       "AI & Cybersecurity Fusion",
