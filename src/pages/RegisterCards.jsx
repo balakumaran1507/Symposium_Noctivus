@@ -115,6 +115,9 @@ const RegisterCards = () => {
           <p className="text-left mb-2">Note:</p>
           <ul className="list-disc list-inside text-white/60 space-y-3">
             <li>
+              Registration fees are non-refundable under any circumstances.
+            </li>
+            <li>
               All tech event participants must bring their own devices to ensure
               smooth and uninterrupted participation.
             </li>
