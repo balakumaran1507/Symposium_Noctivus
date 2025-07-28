@@ -53,7 +53,7 @@ const events = [
     description: "Booyah Awaits",
     date: "Aug 22, 2025",
     venue: "GameZone",
-    schedule: "10:00 AM – 12:45 PM",
+    schedule: "Online Thursday(5:00pm - 9:00pm)",
     teamSize: "4 Members",
     overview:
       "Gear up for an adrenaline-pumping Free Fire tournament that demands tactical skill, fast reflexes, and pure squad synergy.",
@@ -78,7 +78,7 @@ const events = [
     description: "Erangel Echoes",
     date: "Aug 22, 2025",
     venue: "GameZone",
-    schedule: "10:00 AM – 12:45 PM",
+    schedule: "Online Thursday(5:00pm - 9:00pm)",
     teamSize: "4 Members",
     overview:
       "Drop into the battleground for an intense BGMI squad showdown, where only the sharpest team will survive and claim the winner’s tag.",
