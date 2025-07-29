@@ -144,22 +144,6 @@ const events = [
     icon: FiFileText,
   },
   {
-    title: "E-sports",
-    time: "10 – 11:15",
-    start: 10,
-    end: 11.25,
-    color: "orange",
-    icon: FiMonitor,
-  },
-  {
-    title: "E-sports",
-    time: "11:30 – 12:45",
-    start: 11.5,
-    end: 12.75,
-    color: "orange",
-    icon: FiMonitor,
-  },
-  {
     title: "Escape Room",
     time: "10 – 11:15",
     start: 10,
