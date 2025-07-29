@@ -100,14 +100,14 @@ const events = [
       "Plagiarism will lead to immediate disqualification; originality is a must.",
       "Maintain professional behavior and academic integrity throughout.",
       <>
-        All abstracts must be submitted on or before <strong>28th July</strong> to{" "}
+        All abstracts must be submitted on or before <strong>30th July, 10:00 AM</strong>
         <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">
           ops@noctivus.pro
         </a>.
       </>,
       "The abstract must be approximately 150 words, written in Times New Roman, font size 14.",
       <>
-        Final Paper must be submitted before <strong>30th July</strong> to{" "}
+        Final Paper must be submitted on or before <strong>30th July</strong> to{" "}
         <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">
           ops@noctivus.pro 
         </a> with registration proof.
