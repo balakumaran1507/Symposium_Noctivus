@@ -41,11 +41,18 @@ const About = ({ refProp }) => {
           {/* Sponsored by Section */}
           <div className="mt-20 flex flex-col items-centre gap-5 text-xs md:text-sm z-10">
             <p className="mb-2 text-center">SPONSORED BY</p>
-            <img
-              src="/CH_Logo.jpg"
-              alt="Sponsor Logo"
-              className="h-24 md:h-20 object-contain mix-blend-screen opacity-90"
-            />
+            <div className="flex flex-row gap-5">
+              <img
+                src="/CH_Logo.jpg"
+                alt="Sponsor Logo"
+                className="h-24 md:h-20 object-contain mix-blend-screen opacity-90"
+              />
+              <img
+                src="/CL_Logo.jpg"
+                alt="Sponsor Logo"
+                className="h-24 md:h-20 object-contain mix-blend-screen opacity-90"
+              />
+            </div>
           </div>
         </div>
       </div>
