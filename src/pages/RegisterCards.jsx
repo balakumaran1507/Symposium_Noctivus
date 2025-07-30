@@ -1,10 +1,12 @@
 import React, { lazy, Suspense } from "react";
 import SpotlightCard from "../components/SpotlightCard";
 import { LuBug } from "react-icons/lu";
-import { IoFlagOutline } from "react-icons/io5";
+import {
+  IoFlagOutline,
+  IoCodeSlashOutline,
+  IoArrowBackOutline,
+} from "react-icons/io5";
 import { BsNut } from "react-icons/bs";
-import { IoCodeSlashOutline } from "react-icons/io5";
-import { IoArrowBackOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const Aurora = lazy(() => import("../components/Aurora"));
@@ -44,8 +46,7 @@ const RegisterCards = () => {
     {
       name: "E-Sports",
       icon: <IoCodeSlashOutline size={22} className="text-white/80" />,
-      description:
-        "Register now for our online eSports event!",
+      description: "Register now for our online eSports event!",
       link: "https://forms.gle/7zBTR2zK7pAAdbjKA",
     },
   ];
@@ -72,7 +73,7 @@ const RegisterCards = () => {
         <IoArrowBackOutline className="text-sm" />
       </button>
 
-      {/* Fixed Heading (Navbar Style) */}
+      {/* Fixed Heading */}
       <div className="fixed top-0 left-0 w-full z-20 px-10 md:px-20 lg:px-40 pt-20 pb-4 backdrop-blur-3xl">
         <h2 className="text-sm text-center mb-6">REGISTER EVENTS</h2>
         <hr className="border-0.5 border-white/20 w-full" />
@@ -80,7 +81,6 @@ const RegisterCards = () => {
 
       {/* Content Section */}
       <section className="relative z-10 px-20 md:px-40 lg:px-40 pt-[160px] pb-16">
-        {/* Cards Grid */}
         <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {events.map((event, index) => (
             <SpotlightCard
@@ -98,54 +98,70 @@ const RegisterCards = () => {
                 <p className="text-white/60 text-sm">{event.description}</p>
               </div>
 
-              <a
-                href={event.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 self-end px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full transition-all duration-300 text-sm text-center"
-              >
-                Register
-              </a>
+              {/* Conditional Button */}
+              {["Tech & Non-Tech Events", "E-Sports"].includes(event.name) ? (
+                <div className="mt-6 self-end px-4 py-2 bg-red-600 text-white rounded-full text-sm text-center cursor-not-allowed">
+                  Event Closed
+                </div>
+              ) : (
+                <a
+                  href={event.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 self-end px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full transition-all duration-300 text-sm text-center"
+                >
+                  Register
+                </a>
+              )}
             </SpotlightCard>
           ))}
         </div>
 
         {/* Rules Section */}
-        <div className="text-white text-sm mt-12 w-full space-y-4 leading-relaxed">
-          <p className="text-left mb-2">Note:</p>
-          <ul className="list-disc list-inside text-white/60 space-y-3">
-            <li>
-              <strong>fees are non-refundable under any circumstances.</strong>
-            </li>
-            <li>
-              <strong>All tech event participants must bring their own devices to ensure
-              smooth and uninterrupted participation.</strong>
-            </li>
-            <li>
-              Participants can register for only one event from the above list.
-            </li>
-            <li>
-              If not attending the CTF or Bug Bounty, participants may register
-              for any two of the remaining events.
-            </li>
-            <li>
-              Participants Registered for CTF or Bug Bounty, will not be
-              eligible to participate in any other events.
-            </li>
-            <li>
-              Registration must be done individually. For team-based events,
-              Participants can form teams at the venue on the event day.
-            </li>
-            <li>
-              Participants who register for the Workshop will not be eligible
-              for any other event.
-            </li>
-            <li>
-              Food will be provided for all registered participants with both
-              Veg & Non-Veg options available.
-            </li>
-            <li>A Tools Expo will be Available during the Event.</li>
-          </ul>
+        <div className="text-white text-sm mt-12 font-regular w-full space-y-8 leading-relaxed">
+          {/* Important Section */}
+          <div>
+            <p className="text-left text-base mb-2 text-red-500">Important:</p>
+            <ul className="list-disc list-inside text-white/80 space-y-3 font-normal">
+              <li>Fees are non-refundable under any circumstances.</li>
+              <li>
+                All tech event participants must bring their own devices to
+                ensure smooth and uninterrupted participation.
+              </li>
+            </ul>
+          </div>
+
+          {/* Note Section */}
+          <div>
+            <p className="text-left text-base mb-2 text-white">Note:</p>
+            <ul className="list-disc list-inside text-white/60 space-y-3 font-normal">
+              <li>
+                Participants can register for only one event from the above
+                list.
+              </li>
+              <li>
+                If not attending the CTF or Bug Bounty, participants may
+                register for any two of the remaining events.
+              </li>
+              <li>
+                Participants registered for CTF or Bug Bounty will not be
+                eligible to participate in any other events.
+              </li>
+              <li>
+                Registration must be done individually. For team-based events,
+                participants can form teams at the venue on the event day.
+              </li>
+              <li>
+                Participants who register for the Workshop will not be eligible
+                for any other event.
+              </li>
+              <li>
+                Food will be provided for all registered participants with both
+                Veg & Non-Veg options available.
+              </li>
+              <li>A Tools Expo will be available during the event.</li>
+            </ul>
+          </div>
         </div>
       </section>
     </div>
