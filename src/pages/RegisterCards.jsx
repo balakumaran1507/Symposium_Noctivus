@@ -47,7 +47,7 @@ const RegisterCards = () => {
       name: "E-Sports",
       icon: <IoCodeSlashOutline size={22} className="text-white/80" />,
       description: "Register now for our online eSports event!",
-      link: "https://forms.gle/7zBTR2zK7pAAdbjKA",
+      link: "https://docs.google.com/forms/d/e/1FAIpQLSfv8OZoLWUqNE1xDPZIYKNtSXkMrLWNzK3BJGGsEGzjjAvGTQ/viewform?usp=header",
     },
   ];
 
@@ -99,7 +99,7 @@ const RegisterCards = () => {
               </div>
 
               {/* Conditional Button */}
-              {["Tech & Non-Tech Events", "E-Sports"].includes(event.name) ? (
+              {event.name === "Tech & Non-Tech Events" ? (
                 <div className="mt-6 self-end px-4 py-2 bg-red-600 text-white rounded-full text-sm text-center cursor-not-allowed">
                   Event Closed
                 </div>
