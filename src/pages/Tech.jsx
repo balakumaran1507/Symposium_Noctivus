@@ -52,7 +52,7 @@ const events = [
     overview:
       "An AI-powered mobile app-building challenge using any tech stack under a surprise topic",
     rules: [
-      "Participants must build a mobile app using any tech stack, including AI tools",
+      "Participants must build a mobile app/web app using any tech stack, including AI tools",
       "Projects must be developed entirely during the event; no pre-written code",
       "Submissions must be completed and submitted before the deadline",
       "Using existing GitHub repositories or pre-made templates is strictly prohibited",
@@ -107,7 +107,7 @@ const events = [
       </>,
       "The abstract must be approximately 150 words, written in Times New Roman, font size 14.",
       <>
-        Final Paper must be submitted on or before <strong>30th July</strong> to{" "}
+        Final Presentation must be submitted on or before <strong>30th July</strong> to{" "}
         <a href="mailto:ops@noctivus.pro" className="text-blue-500 underline">
           ops@noctivus.pro 
         </a> with registration proof.

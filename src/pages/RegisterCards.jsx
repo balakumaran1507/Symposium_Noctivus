@@ -99,7 +99,7 @@ const RegisterCards = () => {
               </div>
 
               {/* Conditional Button */}
-              {event.name === "Tech & Non-Tech Events" ? (
+              {(event.name === "Tech & Non-Tech Events" || event.name === "Capture the Flag" )? (
                 <div className="mt-6 self-end px-4 py-2 bg-red-600 text-white rounded-full text-sm text-center cursor-not-allowed">
                   Event Closed
                 </div>
